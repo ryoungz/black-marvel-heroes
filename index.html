@@ -2,15 +2,21 @@
  <html ng-app>
     <head>
         <title>Storm comic appearances</title>
+        <link type="text/css" href="style.css">
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
         <script src="marvel.js"></script>
     </head>
 
     <body>
     <div ng-controller="Marvel" ng-init="getItems()">
-        <ul>
-            <li ng-repeat="item in items"> {{item}} </li>
-        </ul>
-    </div>
-    </body>
-</html>
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Issue</th>
+                <th>Cover</th>
+            </tr>
+            <tr ng-repeat="item in items.data.results">
+                <td> {{item.title}} </td>
+                <td> {{item.issueNumber}} </td>
+                <td><img src="{{item.thumbnail.path + '/portrait_small.' + item.thumbnail.extension}}" height="75" width="50" /></td>
+            </tr>
