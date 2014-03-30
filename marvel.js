@@ -11,4 +11,5 @@ function Marvel($scope, $http) {
               alert("Error");
           });
     };
+
 }
