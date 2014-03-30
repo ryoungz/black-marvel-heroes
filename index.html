@@ -1,0 +1,16 @@
+<!doctype html>
+ <html ng-app>
+    <head>
+        <title>Storm comic appearances</title>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+        <script src="marvel.js"></script>
+    </head>
+
+    <body>
+    <div ng-controller="Marvel" ng-init="getItems()">
+        <ul>
+            <li ng-repeat="item in items"> {{item}} </li>
+        </ul>
+    </div>
+    </body>
+</html>
