@@ -8,7 +8,12 @@
     </head>
 
     <body>
-    <div class="credit"><a href="http://marvel.com" target="_blank">Data provided by Marvel. © 2014 Marvel</a></div>
+    <div class="credit"><a href="http://marvel.com" target="_blank">Data provided by Marvel. &copy; 2014 Marvel</a></div><br><br>
+    <div ng-controller="HeroList">
+        <ul>
+            <li ng-repeat="hero in heroes">{{ hero.name }} - {{ hero.description }} - {{ 2 + 2 }}</li>
+        </ul>
+    </div>
     <div ng-controller="Marvel" ng-init="getItems()">
         <table>
             <tr>

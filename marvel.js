@@ -11,5 +11,14 @@ function Marvel($scope, $http) {
               alert("Error");
           });
     };
+}
 
+function HeroList($scope) {
+    $scope.heroes = [
+        {name: 'Abraham Brown', ID: 'xxxxxx', description: 'Black Hero 1'},
+        {name: 'Adept', ID: 'xxxxxx', description: 'Black Hero 2'},
+        {name: 'Aegis', ID: 'xxxxxx', description: 'Black Hero 3'},
+        {name: 'Tempest', ID: 'xxxxxx', description: 'Black Hero 4'},
+        {name: 'Alex Wilder', ID: 'xxxxxx', description: 'Black Hero 5'}
+    ];
 }
